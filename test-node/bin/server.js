@@ -32,7 +32,7 @@ function main() {
   server.addProtoService(test_proto.TestService.service,
                          {testMethod: testMethod});
 
-  let serverUrl = '0.0.0.0:80'
+  let serverUrl = '0.0.0.0:3001'
   server.bind(serverUrl, grpc.ServerCredentials.createInsecure());
   server.start();
   console.log("Server running at port " + serverUrl)
