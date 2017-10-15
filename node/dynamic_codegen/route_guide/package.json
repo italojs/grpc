@@ -1,0 +1,19 @@
+{
+  "name": "route_guide",
+  "version": "1.0.0",
+  "description": "The files in this folder are the samples used in [gRPC Basics: Node.js][], a detailed tutorial for using gRPC in Node.js.",
+  "main": "route_guide_client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "fs": "0.0.1-security",
+    "grpc": "^1.6.6",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "path": "^0.12.7"
+  }
+}
