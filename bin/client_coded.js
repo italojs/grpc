@@ -7,7 +7,7 @@ const proto = grpc.load({root: protoPath, file: 'datagRPC.proto' });
 
 //const url = "http://test-grpc.azurewebsites.net";
 //const url = "localhost:3000"
-const url = "http://40.74.239.112:80";
+const url = "40.74.239.112:3001";
 const client = new proto.testgRPC.TestService(url, grpc.credentials.createInsecure());
 
 function main() {  
