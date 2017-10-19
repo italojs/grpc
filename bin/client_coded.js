@@ -5,9 +5,9 @@ const protoPath = require('path').join(__dirname, '../', 'protos');
 console.log(protoPath);
 const proto = grpc.load({root: protoPath, file: 'datagRPC.proto' });
 
-//const url = "http://test-grpc.azurewebsites.net";
-//const url = "localhost:3000"
-const url = "40.74.239.112:3001";
+const url = "http://test-grpc.southcentralus.cloudapp.azure.com:80";
+//const url = "localhost:3001";
+//const url = "40.74.239.112:80";
 const client = new proto.testgRPC.TestService(url, grpc.credentials.createInsecure());
 
 function main() {  
@@ -20,16 +20,16 @@ function main() {
             console.log('has lines');
             //console.log(data);
         }
-        console.log('Requesting...');
+        console.log('Requesting ',url);
         client.testMethod({ lines: JSON.parse(data) }, function(err, response) {
             if(err){
                 console.log('ERRO: ', err);
             }else{
                 console.log('Greeting:', response); 
             }
-            console.log(response);
+            console.log('response: ', response);
         });
-        console.log("oi");
+        console.log("finish.");
     });
    
   }
